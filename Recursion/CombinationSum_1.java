@@ -7,12 +7,14 @@ class Solution {
         
     }
     public void findcom(int arr[],int ind, int targ, List<List<Integer>> ans, List<Integer> ds ){
+         //base case
         if(ind==arr.length){
             if(targ==0){
                 ans.add(new ArrayList<>(ds));
             }
             return ;
         }
+         // see striv video for detail exp
         if(arr[ind]<=targ){
             ds.add(arr[ind]);
             findcom(arr,ind,targ-arr[ind],ans,ds);
